@@ -1,0 +1,173 @@
+[gd_scene load_steps=12 format=3 uid="uid://u8xd0x4vc8e6"]
+
+[ext_resource type="Script" uid="uid://oa4f06x665l2" path="res://credit.gd" id="1_7ghku"]
+[ext_resource type="Texture2D" uid="uid://bdjceqd1iajwj" path="res://Main menu/Assets/Main Menu Final.jpeg" id="1_y08rf"]
+[ext_resource type="FontFile" uid="uid://di5pm3o5a5ocv" path="res://Main menu/Assets/Font/PublicPixel-rv0pA.ttf" id="2_r4jy5"]
+[ext_resource type="FontFile" uid="uid://emrmg11th8i1" path="res://Main menu/Assets/Font/Quinquefive-8OV1g.ttf" id="3_7ghku"]
+[ext_resource type="FontFile" uid="uid://dsqplbxch1enl" path="res://Main menu/Assets/Font/LcdSolid-VPzB.ttf" id="4_r4jy5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qxitq"]
+texture = ExtResource("1_y08rf")
+modulate_color = Color(0.894922, 0.894922, 0.894922, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qxitq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8kc1"]
+bg_color = Color(0.741385, 0.741385, 0.741385, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l10sr"]
+bg_color = Color(0.607843, 0.607843, 0.607843, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3vx8"]
+bg_color = Color(0.60933, 0.60933, 0.60933, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3j2nc"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7ghku")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qxitq")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -300.0
+offset_right = 784.0
+offset_bottom = 60.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_fonts/font = ExtResource("2_r4jy5")
+theme_override_font_sizes/font_size = 76
+text = "Blood
+"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 427.0
+offset_top = -300.0
+offset_right = 1187.0
+offset_bottom = 60.0
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_fonts/font = ExtResource("2_r4jy5")
+theme_override_font_sizes/font_size = 76
+text = "Of 
+"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -219.0
+offset_right = 784.0
+offset_bottom = 141.0
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_fonts/font = ExtResource("3_7ghku")
+theme_override_font_sizes/font_size = 44
+text = "The Forest"
+
+[node name="Label5" type="Label" parent="Label2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = -69.0
+offset_right = 1157.0
+offset_bottom = 291.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_fonts/font = ExtResource("4_r4jy5")
+theme_override_font_sizes/font_size = 32
+text = "Special thanks and be my inspired 
+@Arwildo (tiktok)
+@Coco COde (Youtube)
+
+U can give ur advice and criticism on my github 
+@NeroSinclair 
+
+Special thanks to be partner
+@saseyou
+@rafoy
+"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -133.0
+offset_top = -74.0
+offset_right = -23.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qxitq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o8kc1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_l10sr")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_n3vx8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3j2nc")
+text = "Back"
+
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

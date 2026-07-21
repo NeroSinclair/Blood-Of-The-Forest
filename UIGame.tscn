@@ -1,0 +1,275 @@
+[gd_scene load_steps=16 format=3 uid="uid://dk46rag1dygsm"]
+
+[ext_resource type="Texture2D" uid="uid://bcj3r5aa640x3" path="res://Player bar/Assets/Aris.png" id="1_opoxi"]
+[ext_resource type="Script" uid="uid://c0dt1k5ojjw5g" path="res://ui_game.gd" id="1_pa8iw"]
+[ext_resource type="Texture2D" uid="uid://d53fwop6ov2u" path="res://Player bar/Assets/LifeBarnulll.png" id="2_8kq5e"]
+[ext_resource type="Texture2D" uid="uid://70bf8op2sxyj" path="res://Player bar/Assets/LifeBarfull.png" id="3_pa8iw"]
+[ext_resource type="FontFile" uid="uid://0377h3oi3rd1" path="res://Main menu/Assets/Font/YangBagus-DYMX9.ttf" id="4_06c1q"]
+[ext_resource type="Texture2D" uid="uid://nkefmf4ka87a" path="res://Player bar/Assets/Pause.png" id="6_pa8iw"]
+[ext_resource type="Texture2D" uid="uid://c81sa17n474l8" path="res://Player bar/Assets/Zombie_head-removebg-preview.png" id="7_06c1q"]
+[ext_resource type="PackedScene" uid="uid://b4vptte6rbvwf" path="res://pausemenu.tscn" id="8_pa8iw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sens7"]
+bg_color = Color(0.0760449, 0.230073, 0.183412, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0.151276, 0.151276, 0.151276, 0.6)
+shadow_size = 13
+shadow_offset = Vector2(0, 4.29)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kq5e"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pa8iw"]
+bg_color = Color(0.243388, 0.0778951, 0.0155701, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0.151276, 0.151276, 0.151276, 0.6)
+shadow_size = 13
+shadow_offset = Vector2(0, 4.29)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opoxi"]
+bg_color = Color(0.344076, 0.344076, 0.344076, 0.615686)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_daxjm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_343xq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sens7"]
+
+[node name="Control" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pa8iw")
+
+[node name="PlayerInfo" type="Panel" parent="."]
+layout_mode = 1
+offset_right = 296.0
+offset_bottom = 94.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sens7")
+
+[node name="AvatarFrame" type="Panel" parent="PlayerInfo"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -39.0
+offset_right = 86.0
+offset_bottom = 41.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8kq5e")
+
+[node name="AvatarPlayer" type="TextureRect" parent="PlayerInfo/AvatarFrame"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 75.0
+offset_bottom = 78.0
+texture = ExtResource("1_opoxi")
+expand_mode = 1
+
+[node name="Healthbar" type="TextureProgressBar" parent="PlayerInfo"]
+visible = false
+layout_mode = 1
+offset_left = 91.0
+offset_top = 12.0
+offset_right = 108.0
+offset_bottom = 29.0
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("2_8kq5e")
+texture_progress = ExtResource("3_pa8iw")
+
+[node name="HeartsContainer" type="HBoxContainer" parent="PlayerInfo"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 41.0
+offset_right = 286.0
+offset_bottom = 81.0
+
+[node name="Health1" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="Health2" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="Health3" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="Health4" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="Health5" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="Health6" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="Health7" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="Health8" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="Health9" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="Health10" type="TextureRect" parent="PlayerInfo/HeartsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_pa8iw")
+stretch_mode = 4
+
+[node name="PlayerName" type="Label" parent="PlayerInfo"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 90.0
+offset_top = -34.0
+offset_right = 850.0
+offset_bottom = 326.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_fonts/font = ExtResource("4_06c1q")
+theme_override_font_sizes/font_size = 16
+text = "Aris
+
+"
+
+[node name="PauseBar" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -279.0
+offset_top = 12.0
+offset_right = -29.0
+offset_bottom = 54.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pa8iw")
+
+[node name="PauseFrame" type="Panel" parent="PauseBar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 212.0
+offset_top = -18.0
+offset_right = 246.0
+offset_bottom = 18.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8kq5e")
+
+[node name="Pause" type="TextureRect" parent="PauseBar/PauseFrame"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 28.0
+offset_bottom = 30.0
+texture = ExtResource("6_pa8iw")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="PauseBar/PauseFrame"]
+process_mode = 3
+layout_mode = 0
+offset_right = 34.0
+offset_bottom = 36.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_opoxi")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_daxjm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_343xq")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_sens7")
+
+[node name="KillCountFrame" type="Panel" parent="PauseBar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -18.0
+offset_right = 40.0
+offset_bottom = 18.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8kq5e")
+
+[node name="KillCount" type="TextureRect" parent="PauseBar/KillCountFrame"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 43.0
+offset_bottom = 47.0
+texture = ExtResource("7_06c1q")
+expand_mode = 1
+
+[node name="LabelKill" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 925.0
+offset_top = -301.0
+offset_right = 1685.0
+offset_bottom = 59.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_fonts/font = ExtResource("4_06c1q")
+theme_override_font_sizes/font_size = 16
+text = "Kills 0/10
+
+"
+
+[node name="pausemenu" parent="." instance=ExtResource("8_pa8iw")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="PauseBar/PauseFrame/Button" to="." method="_on_pause_button_pressed"]

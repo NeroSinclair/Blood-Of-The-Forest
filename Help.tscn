@@ -1,0 +1,136 @@
+[gd_scene load_steps=13 format=3 uid="uid://b0h2pckve81xh"]
+
+[ext_resource type="FontFile" uid="uid://blppkvaqyq81k" path="res://Main menu/Assets/Font/PixelEmulator-xq08.ttf" id="1_dqpet"]
+[ext_resource type="Script" uid="uid://j32fekuixfnk" path="res://Help.gd" id="1_jbhv8"]
+[ext_resource type="FontFile" uid="uid://ci2k4rr75ig8o" path="res://Main menu/Assets/Font/PixelGamingRegular-d9w0g.ttf" id="2_yy6fl"]
+[ext_resource type="Texture2D" uid="uid://ffbw0hp3offo" path="res://World/Assets/UI/20260715_205723.png" id="3_70usl"]
+[ext_resource type="Texture2D" uid="uid://qv07uufiopy1" path="res://World/Assets/UI/20260715_205619.png" id="4_jbhv8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70usl"]
+bg_color = Color(0.187176, 0.187176, 0.187176, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqpet"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw3ow"]
+bg_color = Color(0.0797979, 0.0160885, 0.00142581, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk2pv"]
+bg_color = Color(0.0784314, 0.0156863, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3q21s"]
+bg_color = Color(0.0784314, 0.0156863, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2u874"]
+bg_color = Color(0.269272, 0.101867, 0.0137252, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbhv8"]
+bg_color = Color(0.383212, 0.157769, 0.0336214, 1)
+
+[node name="Help" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jbhv8")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_70usl")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.5
+offset_top = 11.0
+offset_right = 180.5
+offset_bottom = 60.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_yy6fl")
+theme_override_font_sizes/font_size = 39
+text = "PANDUAN KONTROL"
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.985
+anchor_top = 0.017
+anchor_right = 0.985
+anchor_bottom = 0.017
+offset_left = -79.7201
+offset_top = -0.0160007
+offset_right = 5.27991
+offset_bottom = 41.984
+grow_horizontal = 0
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_dqpet")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dqpet")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cw3ow")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_mk2pv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3q21s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2u874")
+text = "Back"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -532.0
+offset_top = 67.0
+offset_right = 546.0
+offset_bottom = 609.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jbhv8")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel2/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_70usl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Panel2/MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_jbhv8")
+expand_mode = 1
+stretch_mode = 5

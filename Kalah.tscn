@@ -1,0 +1,158 @@
+[gd_scene load_steps=16 format=3 uid="uid://bffq78n5bn5nx"]
+
+[ext_resource type="Shader" uid="uid://daogb73wj22wn" path="res://pausemenu.gdshader" id="1_3dylb"]
+[ext_resource type="Script" uid="uid://c01f85x67ghej" path="res://kalah.gd" id="1_y3iv2"]
+[ext_resource type="PackedScene" uid="uid://doxy444ig466x" path="res://Main menu/main_menu.tscn" id="2_6y43u"]
+[ext_resource type="FontFile" uid="uid://blppkvaqyq81k" path="res://Main menu/Assets/Font/PixelEmulator-xq08.ttf" id="3_8xl4m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y3iv2"]
+shader = ExtResource("1_3dylb")
+shader_parameter/blur_amount = 2.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_6y43u"]
+font = ExtResource("3_8xl4m")
+font_size = 63
+font_color = Color(0.667202, 0, 0.220017, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8xl4m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6y43u"]
+bg_color = Color(0.741176, 0.741176, 0.741176, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emm2b"]
+bg_color = Color(0.607843, 0.607843, 0.607843, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxbuq"]
+bg_color = Color(0.607843, 0.607843, 0.607843, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5prkc"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iy2ae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jpd60"]
+bg_color = Color(0.741385, 0.741385, 0.741385, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8hwdt"]
+bg_color = Color(0.607843, 0.607843, 0.607843, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkw2s"]
+bg_color = Color(0.60933, 0.60933, 0.60933, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.211765, 0.211765, 0.211765, 1)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Kalah" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y3iv2")
+main_menu_scene = ExtResource("2_6y43u")
+
+[node name="BlurOverlay" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_y3iv2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.147672, 0.147672, 0.147672, 0.65098)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.5
+offset_top = -93.5
+offset_right = 142.5
+offset_bottom = 93.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_6y43u")
+horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8xl4m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6y43u")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_emm2b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pxbuq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5prkc")
+text = "Restart"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iy2ae")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jpd60")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_8hwdt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jkw2s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5prkc")
+text = "Quit"

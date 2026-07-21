@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bn52s8w3865e6"
+path="res://.godot/imported/Melancholic Walk - Pix.mp3-df06b805938ca6df3eb081c0705ef1d8.mp3str"
+
+[deps]
+
+source_file="res://Soundtrack/Melancholic Walk - Pix.mp3"
+dest_files=["res://.godot/imported/Melancholic Walk - Pix.mp3-df06b805938ca6df3eb081c0705ef1d8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
