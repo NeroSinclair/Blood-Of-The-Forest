@@ -2,11 +2,11 @@ Indie simple game
 
 "Blood Of The Forest"
 
-Genre : Hack and slash, Action Roguelike
+Genre : Hack and slash, Action RPG, Side scrolling
 
 Recruitments :
-- GODOT v 4.4 Stable
-- Size 57.7 Mb (Beta 4.0)
+- OS Windows 10 or higher
+- Storage 202 Mb (Beta 5.0)
   
 Inspired by : @Arwildo, @Coco Code
 
