@@ -51,3 +51,12 @@ Patch Beta 4.0
 - Add Credit
 - Add Soundtrack
 - Fix Zombie movement
+
+Patch Beta 5.0
+- Add boss 
+- Add feature insta heal + buff damage when complete objective
+- Add Objective
+- Add help menu
+- Add Main Menu game
+- Rework Map
+- Fix some bug in animation zombie and boss
